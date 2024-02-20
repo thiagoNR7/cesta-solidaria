@@ -1,4 +1,4 @@
-import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
+import { GoogleLoginProvider, SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
 import { Component } from '@angular/core';
 
 @Component({
@@ -20,5 +20,12 @@ export class LoginComponent {
     }, err =>{
       console.log('error', err)
     });
+    
+  }
+  signOut(): void {
+    this.authService.signOut();
   }
 }
+
+  
+
