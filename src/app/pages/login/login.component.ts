@@ -1,31 +1,37 @@
-import { GoogleLoginProvider, SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
+import {
+  GoogleLoginProvider,
+  SocialAuthService,
+  SocialUser,
+} from '@abacritt/angularx-social-login';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  user?: SocialUser;
-  loggedIn?: boolean;
+  adminUser = 'thiagonovato65@gmail.com';
 
-  constructor(private authService: SocialAuthService) { }
+  constructor(private authService: SocialAuthService) {}
 
   ngOnInit() {
-    this.authService.authState.subscribe((user) => {
-      console.log('logged-user', user)
-      this.user = user;
-      this.loggedIn = (user != null);
-    }, err =>{
-      console.log('error', err)
-    });
-    
+    this.authService.authState.subscribe(
+      (user) => {
+        const userLogged = user.email;
+        if (userLogged === this.adminUser) {
+        console.log('usuario com acesso administrativo', user.name )
+        }else{
+          console.log('usuario sem acesso administrativo', user.name)
+        }
+      },
+      (err) => {
+        console.log('error', err);
+      }
+    );
   }
   signOut(): void {
     this.authService.signOut();
+    
   }
 }
-
-  
-
