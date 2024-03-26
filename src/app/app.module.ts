@@ -10,6 +10,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { LoginComponent } from './pages/login/login.component';
 import { GoogleLoginProvider, GoogleSigninButtonModule, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar'
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { GoogleLoginProvider, GoogleSigninButtonModule, SocialAuthServiceConfig,
     GoogleSigninButtonModule,
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
   ],
   providers: [
     {

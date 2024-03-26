@@ -15,17 +15,14 @@
 .div-2 {
   display: grid;
   grid-template-columns: 2fr 2fr;
-  grid-gap: 20px;
 }
 
 label {
   color: black;
 }
-
 input {
   font-size: 16px;
   color: black;
-  width: 100%;
   border: none;
   border: #e5989b;
   border-bottom-width: 2px;
@@ -41,7 +38,7 @@ input:focus {
 span {
   display: flex;
   flex-direction: column-reverse;
-  align-items: center;
+  align-items: normal;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -68,4 +65,27 @@ h2 {
   flex-direction: row;
   align-content: stretch;
   align-items: flex-end;
+}
+.nome {
+  width: 40vw;
+}
+.rua {
+  width: 40vw;
+}
+.rg {
+  width: 17vw;
+}
+.cpf {
+  width: 15vw;
+}
+.estado {
+  width: 40vw;
+}
+.sobrenome {
+  padding-bottom: 17px;
+  width: 28.9vw;
+}
+.checkbox {
+  width: 5vw;
+  background: transparent;
 }
