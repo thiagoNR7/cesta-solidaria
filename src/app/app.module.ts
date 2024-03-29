@@ -11,7 +11,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { LoginComponent } from './pages/login/login.component';
 import { GoogleLoginProvider, GoogleSigninButtonModule, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar'
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -30,7 +30,7 @@ import { MatToolbarModule } from '@angular/material/toolbar'
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
+    MatCardModule,
   ],
   providers: [
     {

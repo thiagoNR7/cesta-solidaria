@@ -16,7 +16,7 @@ export class LoginComponent {
 
   constructor(private authService: SocialAuthService, private router: Router) {}
 
-  ngOnInit() {
+  ngOnInit() { 
     this.authService.authState.subscribe(
       (user) => {
         const userLogged = user.email;
@@ -24,6 +24,7 @@ export class LoginComponent {
         console.log('usuario com acesso administrativo', user.name )
         this.router.navigate(['/cadastro'])
         }else{
+          this.signOut()
           this.router.navigate([''])
           console.log('usuario sem acesso administrativo', user.name)
         }
@@ -35,6 +36,7 @@ export class LoginComponent {
       }
     );
   }
+
   signOut(): void {
     this.authService.signOut();
     
