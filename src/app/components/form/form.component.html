@@ -5,13 +5,21 @@
   <div class="dados-identificador">
     <p>dados identificador</p>
   </div>
+  
   <div class="container-name">
     <div class="nome">
-      <label for="nome"
-        >nome:<input type="name" id="nome" name="name" required class="nome" />
-      </label>
+      <mat-form-field>
+      <mat-label for="nome"> Nome
+         <input matInput type="name" id="nome" name="name" required class="nome"  placeholder="Nome"/>
+      </mat-label>
+    </mat-form-field>
     </div>
-    <div class="sobrenome"></div>
+  
+    <div class="sobrenome">
+      <label for="sobrenome">
+        <input type="name" id="nome" name="name" required class="sobrenome"  placeholder="Sobrenome"/>
+    </label> 
+    </div>
   </div>
 
   <div class="identidade"></div>
