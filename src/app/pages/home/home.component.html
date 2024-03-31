@@ -5,14 +5,14 @@
     <div class="title">
       <p>ultimas noticias</p>
     </div>
-    <div>
+    <div  *ngIf="currentNews">
       <mat-card class="example-card">
         <img
           mat-card-image
-          src="{{news[2].img}}"
+          src="{{currentNews.img}}"
           alt="Photo of a Shiba Inu"
         />
-        <p>{{currentNews}}</p> 
+        <p>{{currentNews.title}}</p>
 
       </mat-card>
     </div>

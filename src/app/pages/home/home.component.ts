@@ -13,7 +13,8 @@ import { News } from 'src/app/interfaces/news.interface';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  currentNews: string = '';
+  //alterado o tipo da variável para News que é a interface que fizemos
+  currentNews?: News;
   posicaoAtual: number = 0;
 
   newsA: News = {
@@ -38,7 +39,8 @@ export class HomeComponent {
     this.exibirNoticia(0);
   }
   exibirNoticia(posicao: number): void {
-    this.currentNews = this.news[posicao].title;
+    //É preciso acessar a notícia completa no HTML se vc acessar apenas o title, a imagem será a mesma caso fossem imagens diferentes
+    this.currentNews = this.news[posicao]
   }
 
   getNextNews(): void {
