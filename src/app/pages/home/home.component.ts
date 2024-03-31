@@ -13,7 +13,7 @@ import { News } from 'src/app/interfaces/news.interface';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  noticiaAtual: string = '';
+  currentNews: string = '';
   posicaoAtual: number = 0;
 
   newsA: News = {
@@ -38,15 +38,14 @@ export class HomeComponent {
     this.exibirNoticia(0);
   }
   exibirNoticia(posicao: number): void {
-   this.noticiaAtual
-   this.news[posicao];
+    this.currentNews = this.news[posicao].title;
   }
 
   getNextNews(): void {
     this.posicaoAtual++;
-    if(this.posicaoAtual >= this.news.length) {
-      this.posicaoAtual = 0
+    if (this.posicaoAtual >= this.news.length) {
+      this.posicaoAtual = 0;
     }
-    this.exibirNoticia(this.posicaoAtual)
+    this.exibirNoticia(this.posicaoAtual);
   }
 }
