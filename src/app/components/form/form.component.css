@@ -18,9 +18,86 @@
 
 .container-name {
   display: flex;
+  gap: 30px;
 }
-.nome:host {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+ label .nome, .sobrenome{
+  font-size: 16px;
+  color: black;
+  border: none;
+  border: #e5989b;
+  border-bottom-width: 1px;
+  border-bottom-style: groove;
+  transition: 0.15s linear;
+  background: transparent;
+  width: 35vw;
+  padding: 7px;
+  
 }
+.container-registros{
+display: flex;
+ gap: 152px;
+
+}
+
+label .cpf, .rg{
+  font-size: 16px;
+  color: black;
+  border: none;
+  border: #e5989b;
+  border-bottom-width: 1px;
+  border-bottom-style: groove;
+  transition: 0.15s linear;
+  background: transparent;
+  padding: 7px;
+
+}
+input[type="checkbox"] {
+  -webkit-appearance: none; /* Removendo o estilo padrão do navegador */
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e5989b; /* Cor da borda do checkbox */
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: aquamarine /* Cor de fundo quando marcado */
+}
+.container-endereco{
+  text-decoration: underline;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  margin-top: 30px;
+  margin-bottom: 20px;
+   }
+   label .rua, .bairro{
+    font-size: 16px;
+    color: black;
+    border: none;
+    border: #e5989b;
+    border-bottom-width: 1px;
+    border-bottom-style: groove;
+    transition: 0.15s linear;
+    background: transparent;
+    width: 35vw;
+    padding: 7px;
+    
+  }
+  label .estado, .cidade{
+    margin-top: 30px;
+    font-size: 16px;
+    color: black;
+    border: none;
+    border: #e5989b;
+    border-bottom-width: 1px;
+    border-bottom-style: groove;
+    transition: 0.15s linear;
+    background: transparent;
+    width: 35vw;
+    padding: 7px;
+  }
+
+   
