@@ -8,12 +8,19 @@ import { Menu } from 'src/app/interfaces/menu.interfaces';
 })
 export class MenuComponent {
   isMenuOpen = false;
-  menuPainel: Menu = {
+  menuPainelA: Menu = {
     title: 'painel Administrativo',
     path: '/login',
   };
-  menus = [this.menuPainel];
- 
+  menuPainelB: Menu = {
+    path: '',
+    title: 'Home',
+  };
+  menuPainelC: Menu = {
+    path: '/map',
+    title: 'Pontos de Soliedariedade  ',
+  };
+  menus = [this.menuPainelA, this.menuPainelB, this.menuPainelC];
 
   closeOpenMenu() {
     this.isMenuOpen = !this.isMenuOpen;

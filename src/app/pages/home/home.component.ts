@@ -50,4 +50,6 @@ export class HomeComponent {
     }
     this.exibirNoticia(this.posicaoAtual);
   }
+
+  getPreviousNews(){}
 }
