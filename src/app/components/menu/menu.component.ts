@@ -1,10 +1,30 @@
-import { Component, OnInit, } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Menu } from 'src/app/interfaces/menu.interfaces';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.css'],
 })
-export class MenuComponent{
+export class MenuComponent {
+  isMenuOpen = false;
+  menuPainelA: Menu = {
+    title: 'Home',
+    path: '',
+  };
+  menuPainelB: Menu = {
+    path: '/login',
+    title: 'painel Administrativo',
+  };
+  menuPainelC: Menu = {
+    path: '/map',
+    title: 'Pontos de Soliedariedade',
+  };
+  menus = [this.menuPainelA, this.menuPainelB, this.menuPainelC];
 
+  closeOpenMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+   
   }
+  
+}

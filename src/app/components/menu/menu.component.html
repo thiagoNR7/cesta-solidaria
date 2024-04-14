@@ -1,3 +1,27 @@
-
-<button [routerLink]="['/login']"> painel administrativo</button>
-
+<div
+  class="container-menu"
+  [ngClass]="{ 'open-menu': isMenuOpen, 'closed-menu': !isMenuOpen }"
+>
+  <div class="header-menu">
+    <div class="title" *ngIf="isMenuOpen">
+      <img
+        src="https://s3-alpha-sig.figma.com/img/cc60/e206/67b9172168ba0c7aadb6262afc98a37a?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IP2f7HxGgM-cFcGQ0GQZDHBiigYO4LdrI4yIFjATAZsTqdk6AMvpiLSjk9txyrLAvJiJMo5FnvLg2qNvGEgs2hJqiL5ZcUHbOVoG8x4uAgW2voyywzlZ-B9yN4HQLwmh0rxbvzeY9HGjSbl0DmYClbJQzNgG29MIN6agw6OBJpatXXysSwpB87FYrNYRJP6HIG5YvKhwMAQnn6TCVc7ww2KydM8iK7E1jYe3CEtGaxfocEyaMIW3E7y-lgHV4eS~6jcGbJ9tn~zXh7aYqGBk5qwaE0mn1rbDFSzYt6~bKWzxihHu9Mfg3pXJ8AmyxHrzJB4oZQ9tlUgbcAYWpwSYqA__"
+        alt="erro"
+        width="20px"
+        height="20px"
+      />cesta solidaria
+    </div>
+    <img
+      src="https://s3-alpha-sig.figma.com/img/f434/4028/7967b988e434dc73d451cf9501c589f0?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=keORS95-9MkIJHG-A1S8~gOZhLJEdnGAgtWaqGBSs1J8k6yVMf3U8HdiGKLMFl9R0Uyx7WOmfG9RQ4xwyIqd~PsbC0Gp456Tgn~x~KBlAf-GgxP8Vc4ajGyUXA3VsmWYlAnqKrGcs3COx3iYViORN-x9mImtVaOQNYkL3JPoCE~8Niq1pccJQVS7FO9naC7AxW10ZrI9QueKp6RYF~taJqeKcCiBxolyO3Hkr~FihZQYpJiFAfnjyDq8ctQG~uvPra9FlMbyer~tls39Loh~xGEr7CsFfZ68zR0c8uAoRRbwnekbm22pDoxDewFCgaPKXoQ3iCCbLGeF6NDA85m41g__"
+      (click)="closeOpenMenu()"
+      alt="erro"
+      width="20px"
+      height="20px"
+    />
+  </div>
+  <div *ngIf="isMenuOpen" >
+    <button [routerLink]="[menu.path]" *ngFor="let menu of menus">
+      {{ menu.title }}
+    </button>
+  </div>
+</div>

@@ -1,28 +1,140 @@
+<div class="menu-container"></div>
+
 <div class="titulo-superior">
   <p>cadastro de pessoa</p>
 </div>
 <div class="container">
   <div class="dados-identificador">
-    <p>dados identificador</p>
+    <p>dados de identificação</p>
   </div>
-  
+
   <div class="container-name">
     <div class="nome">
-      <mat-form-field>
-      <mat-label for="nome"> Nome
-         <input matInput type="name" id="nome" name="name" required class="nome"  placeholder="Nome"/>
-      </mat-label>
-    </mat-form-field>
+      <label for="Primeiro-nome">
+        <input
+          type="name"
+          id="nome"
+          name="name"
+          required
+          class="nome"
+          placeholder="Nome"
+        />
+      </label>
     </div>
-  
-    <div class="sobrenome">
+
+    <div class="segundo-nome">
       <label for="sobrenome">
-        <input type="name" id="nome" name="name" required class="sobrenome"  placeholder="Sobrenome"/>
-    </label> 
+        <input
+          type="name"
+          id="nome"
+          name="name"
+          required
+          class="sobrenome"
+          placeholder="Sobrenome"
+        />
+      </label>
     </div>
   </div>
 
-  <div class="identidade"></div>
+  <div class="container-registros">
+    <div class="identidade">
+      <label for="cpf">
+        <input
+          type="name"
+          id="cpf"
+          name="name"
+          required
+          class="cpf"
+          placeholder="cpf"
+        />
+      </label>
+
+      <label for=" rg">
+        <input
+          type="name"
+          id="rg"
+          name="name"
+          required
+          class="rg"
+          placeholder="rg"
+        />
+      </label>
+    </div>
+
+    <div class="checkbox">
+      <label>Sexo:</label>
+    </div>
+
+    <div class="container-checkbox">
+      <label for="">
+        <input type="checkbox" name="masculino" id="" class="homem" /> masculino
+      </label>
+      <label for="">
+        <input type="checkbox" name="masculino" id="" /> feminino
+      </label>
+      <label for="">
+        <input type="checkbox" name="masculino" id="" /> não informar
+      </label>
+    </div>
+  </div>
+  <div class="container-endereco">
+    <p>endereço</p>
+  </div>
+  <div class="container-name">
+    <div class="rua">
+      <label for="rua">
+        <input
+          type="name"
+          id="nome"
+          name="name"
+          required
+          class="nome"
+          placeholder="rua"
+        />
+      </label>
+    </div>
+
+    <div class="container-bairro">
+      <label for="bairro">
+        <input
+          type="name"
+          id="bairro"
+          name="name"
+          required
+          class="bairro"
+          placeholder="Bairro"
+        />
+      </label>
+    </div>
+  </div>
+
+  <div class="container-name">
+    <div class="container-cidade">
+      <label for="cidade">
+        <input
+          type="name"
+          id="nome"
+          name="name"
+          required
+          class="cidade"
+          placeholder="cidade"
+        />
+      </label>
+    </div>
+
+    <div class="estado">
+      <label for="estado">
+        <input
+          type="name"
+          id="nome"
+          name="name"
+          required
+          class="estado"
+          placeholder="estado"
+        />
+      </label>
+    </div>
+  </div>
 </div>
 
 <button (click)="cadastrar()">Cadastrar</button>
