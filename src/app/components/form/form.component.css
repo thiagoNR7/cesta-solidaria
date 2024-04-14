@@ -99,6 +99,7 @@ input[type="checkbox"]:checked {
   font-family: "Roboto", sans-serif;
   margin-top: 30px;
   margin-bottom: 20px;
+  margin-left: 19px;
    }
    label .rua, .bairro{
     font-size: 16px;

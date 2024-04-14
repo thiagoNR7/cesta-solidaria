@@ -9,21 +9,22 @@ import { Menu } from 'src/app/interfaces/menu.interfaces';
 export class MenuComponent {
   isMenuOpen = false;
   menuPainelA: Menu = {
-    title: 'painel Administrativo',
-    path: '/login',
+    title: 'Home',
+    path: '',
   };
   menuPainelB: Menu = {
-    path: '',
-    title: 'Home',
+    path: '/login',
+    title: 'painel Administrativo',
   };
   menuPainelC: Menu = {
     path: '/map',
-    title: 'Pontos de Soliedariedade  ',
+    title: 'Pontos de Soliedariedade',
   };
   menus = [this.menuPainelA, this.menuPainelB, this.menuPainelC];
 
   closeOpenMenu() {
     this.isMenuOpen = !this.isMenuOpen;
-    console.log(this.isMenuOpen);
+   
   }
+  
 }

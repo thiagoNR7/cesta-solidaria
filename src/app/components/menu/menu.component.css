@@ -12,11 +12,31 @@
     justify-content: space-between;
     margin: 10px;
     border-bottom: 1px solid white;
-    padding-bottom: 18px;
+    margin-bottom: 90px;
+    padding: 10px;
 }
 
 .btn-close{
 
     background-color: transparent;
     border: 0px;
+}
+button{
+    border: 0px;
+    background: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    color: white;
+}
+.title{
+    display: flex;
+    gap: 7px;
+}
+.open-menu {
+    width: 200px; 
+}
+
+.closed-menu {
+    width: 50px;
 }

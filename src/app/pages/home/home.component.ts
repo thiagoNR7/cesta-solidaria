@@ -39,7 +39,7 @@ export class HomeComponent {
     this.exibirNoticia(0);
   }
   exibirNoticia(posicao: number): void {
-    //É preciso acessar a notícia completa no HTML se vc acessar apenas o title, a imagem será a mesma caso fossem imagens diferentes
+    
     this.currentNews = this.news[posicao]
   }
  
