@@ -1,0 +1,22 @@
+<p>map works!</p>
+
+<google-map
+height="500px"
+  width="100%"
+  [zoom]="zoom"
+  [center]="center"
+  [options]="options"
+>
+<map-marker
+    #markerElem
+    *ngFor="let marker of markers"
+    [position]="marker.position"
+    [label]="marker.label"
+    [title]="marker.title"
+    [options]="marker.options"
+  >
+  </map-marker>
+</google-map>
+
+<button (click)="markMyPlace()">click</button>
+<button (click)="getCoordByAddress('rua valorbe 462, sao paulo')">Obter endereço por texto</button>

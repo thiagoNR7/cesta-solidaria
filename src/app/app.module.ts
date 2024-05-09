@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MapComponent } from './components/map/map.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 
 @NgModule({
@@ -24,6 +26,7 @@ import { MatInputModule } from '@angular/material/input';
     HomeComponent,
     MenuComponent,
     LoginComponent,
+    MapComponent,
   ],
   imports: [
     SocialLoginModule,
@@ -35,6 +38,7 @@ import { MatInputModule } from '@angular/material/input';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    GoogleMapsModule,
   ],
   providers: [
     {

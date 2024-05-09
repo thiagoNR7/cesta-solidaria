@@ -53,10 +53,10 @@ export class HomeComponent {
 
   getPreviousNews(): void{
     this.posicaoAtual--;
-    if(this.posicaoAtual >= this.news.length){
-      this.posicaoAtual = 0
+    if(this.posicaoAtual < 0 ){
+      this.posicaoAtual = this.news.length - 1;
     }
-    this.exibirNoticia(this.posicaoAtual)
+    this.currentNews = this.news[this.posicaoAtual];
   }
 }
 
