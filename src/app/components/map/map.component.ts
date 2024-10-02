@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MapMarker } from '@angular/google-maps';
 
+
 interface LatLngLiteral {
   lat: number;
   lng: number;
@@ -24,12 +25,9 @@ export class MapComponent implements OnInit {
   
   endereco: string[] = [
     'Rua mazzei, 123',
-    'Avenida Antonello da Messina, 456',
     'Praça jaçanã, 789',
     'Alameda pêssego, 321',
-    'Rua flor de maio, 555',
     'Rua augusta, 777',
-    'Travessa Alto Grande, 49',
     'Rua Comendador Antonio Antunes, 180',
     'Beco das Araras, 666',
     'Viela da Lua, 444'
