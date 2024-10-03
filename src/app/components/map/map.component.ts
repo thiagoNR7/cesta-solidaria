@@ -26,7 +26,7 @@ export class MapComponent implements OnInit {
   endereco: string[] = [
     'Rua mazzei, 123',
     'Praça jaçanã, 789',
-    'Alameda pêssego, 76647',
+    'Alameda pêssego, 766411',
     'Rua augusta, 777',
     'Rua Comendador Antonio Antunes, 180',
     'Beco das Araras, 666',
